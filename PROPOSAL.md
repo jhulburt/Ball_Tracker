@@ -1,90 +1,43 @@
-*NOTE TO STUDENTS:  This is a template for your **proposal**.  Items wrapped inside `{}` should be replaced accordingly.*
 
-*Your updated proposal document (this file) is due on Tuesday, November 23, at 2:20pm.*
-
-**Please delete this line, and the comments above.**
-
---- 
-
-# {Provide a Project Title Here}
+# Ball Tracker
 
 Team Members:
-- {Member 1 Name}, {Member 1 email}
-- {Member 2 Name}, {Member 2 email}
+- Joshua Hulburt, jthulbur@buffalo.edu
 
 --- 
 
 ## Project Objective
-{What are you proposing to do?}
-
+Follow an object and stay a preset distance behind it. Should be reasonably applicable to robots for testing at the end of the semester. 
 
 ## Contributions
-{What is new/unique/interesting about this project?}
+The interesting thing about this roject is the challenge of making a robust object tracker and then applying it towards the goal of navigation.
+There are exsisting Ball targeting object trackers that exsist out there but they are typically the intro example into object tracking code and work on a simply tracking an object of a single color across a screen. My task is a bit simpler because I know the size shape and color of my object of interest but compleating this project well will let me practice basic concepts of more complex machine learing and object tracking
 
 
 ## Project Plan
-{How will we do it?  What resources will we use (e.g., specific online materials, specific chapters from the textbook, etc.)?}
+using navigation infomation from teleopbot and follow bot chapters of the book as well as the website https://www.pyimagesearch.com/ 
 
 
 ## Milestones/Schedule Checklist
 {What are the tasks that you need to complete?  Who is going to do them?  When will they be completed?}
-- [x] Complete this proposal document.  *Due Nov. 2*
-- [ ] {add tasks here}
-- [ ] Create progress report.  *Due Nov. 20*
-- [ ] {add more tasks here}
-- [ ] Create final presentation.  *Due Dec. 4*
-- [ ] {you might have some more tasks here}
+- [x] Complete this proposal document.  *Due Nov. 4*
+- [x] Classify blue in different lightings Due 11/13
+- [x] Search image for blue *Due 11/13*
+- [ ] Implement object tracker to navigation Due 11/20
+- [ ] Find Blue ball in image Due 11/27
+- [ ] Final Report & Documentation  *Due Dec. 4*
 - [ ] Provide system documentation (README.md).  *Due Dec. 14*
 
 
 ## Measures of Success
-{How will you know you succeeded?  If you were to receive partial credit, what should we look for?}
+- [ ] My code should be able to find a blue ball in an image
+- [ ] 
 
 
----
-**A Sample Proposal Appears Below**
----
-
-# Creating a Gazebo Model of the Duckiebot
-
-Team Members:
-- Chase Murray, cmurray3@buffalo.edu
-- Jane Student, j@buffalo.edu
 
 
-## Project Objective
-The goal of this project is to create a Gazebo model of the Duckiebot. This model will accurately reflect the dimensions of the Duckiebot, will include the Duckiebot's sensors (a fisheye lens camera and a magnetometer), and will have the same drive train (two motors controlling the two motorized wheels).
 
 
-## Contributions
-There are currently no Gazebo models of this robot.  By creating such a model, we will be able to test control algorithms in a simulated environment (without the need for the physical robot itself).  However, after training the control algorithms in Gazebo, it will be easy to execute them on a real Duckiebot, since the simulated version will be an accurate representation.
 
-
-## Project Plan
-The textbook contains two chapters (Chapters 15--17) that describe how to build a custom robot.
-However, these chapters do not discuss the use of a fisheye lens.  We will use the ros.org Website to learn how to model such cameras.
-We will also consult the Duckiebot specs to determine the dimensions and weight of the robot, as well as the capabilities of the motors.
-
-
-## Milestones/Schedule Checklist
-- [x] Complete this proposal document.  *Due Nov. 2*
-- [ ] Capture the specs of the actual/physical robot.  *JS, Nov. 13*
-- [ ] Build a sample model using the textbook examples. *CM, Nov. 13*
-- [ ] Modify the sample model to match the specs of the Duckiebot.  *CM, Nov. 17*
-- [ ] Add a fisheye lens camera. *JS, Nov. 18*
-- [ ] Create progress report.  *Due Nov. 20*
-- [ ] Create Gazebo .launch files to test the robot.  *CM, Dec. 1*
-- [ ] Create a simple controller to test the interaction with the robot. *JS, Dec. 3*
-- [ ] Create final presentation.  *Due Dec. 4*
-- [ ] Update documentation based on presentation feedback. *CM, Dec. 7*
-- [ ] Provide system documentation (README.md).  *Due Dec. 14*
-
-
-## Measures of Success
-- [ ] View robot model in Gazebo.
-- [ ] Demonstrate that the fisheye lens camera is appropriately distorted.
-- [ ] Demonstrate that robot moves when given commands.
-- [ ] Implement code on a real Duckiebot.
-- [ ] Have a classmate follow the steps in the README to successfully run the simulation without any help.
 
 
