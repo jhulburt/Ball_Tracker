@@ -35,9 +35,11 @@ My code should:
 - [ ]  Be able to find a blue ball in an image
 - [ ]  Be able to differentiate a blue ball from reasonably similar objects
 - [ ]  Be able to follow the blue ball in the an environment
+- [ ]  implement gazebo code to a actual robot
 
 stretch
 - [ ]  be able to differentiate a circle from a sphere
+- [ ]  explore some other algorithims pattern recognition cv2 
 
 
 
