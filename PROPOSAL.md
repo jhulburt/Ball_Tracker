@@ -23,8 +23,8 @@ using navigation infomation from teleopbot and follow bot chapters of the book a
 - [x] Complete this proposal document.  *Due Nov. 4*
 - [x] Classify blue in different lightings Due 11/13
 - [x] Search image for blue *Due 11/13*
-- [ ] Implement object tracker to navigation Due 11/20
-- [ ] make moving Ball in Gazebo 11/25
+- [x] Implement object tracker to navigation Due 11/20
+- [x] make moving Ball in Gazebo 11/25
 - [x] Find Blue ball in image Due 11/27
 - [ ] Final Report & Documentation  *Due Dec. 4*
 - [ ] Provide system documentation (README.md).  *Due Dec. 14*
@@ -32,14 +32,15 @@ using navigation infomation from teleopbot and follow bot chapters of the book a
 
 ## Measures of Success
 My code should:
-- [ ]  Be able to find a blue ball in an image
-- [ ]  Be able to differentiate a blue ball from reasonably similar objects
-- [ ]  Be able to follow the blue ball in the an environment
-- [ ]  implement gazebo code to a actual robot
+- [x]  Be able to find a blue ball in an image
+- [x]  Be able to differentiate a blue ball from reasonably similar objects
+- [x]  Be able to follow the blue ball in the an environment
+- [?]  implement gazebo code to a actual robot
 
 stretch
-- [ ]  be able to differentiate a circle from a sphere
+- [ ]  be able to differentiate a circle from a sphere?
 - [ ]  explore some other algorithims pattern recognition cv2 
+- [ ]  be able to guess where the object should be?
 
 
 
