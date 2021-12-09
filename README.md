@@ -28,7 +28,8 @@ Team:
 
 ### Contributions
 
-*In this subsection, I want to know what is new/unique/interesting about your project.*
+The interesting thing about this roject is the challenge of making a robust object tracker and then applying it towards the goal of navigation.
+There are exsisting Ball targeting object trackers that exsist out there but they are typically the intro example into object tracking code and work on a simply tracking an object of a single color across a screen. My task is a bit simpler because I know the size shape and color of my object of interest but completing this project well will let me practice basic concepts of more complex machine learing and object tracking
 
 ---
 
@@ -45,15 +46,14 @@ List of Prerequisite Software:
 - python3-math
 - Open CV CV2
 
-*This is just a list, not installation instructions.  The idea is to provide a summary of the additional software/packages that need to be installed.  Instructions go below.*
-
-
-*Now, provide detailed step-by-step instructions to install all necessary software for your project.*
 
 *The expectation is that the user should only have to follow these steps one time.  For example, if your project requires generating Gazebo mazes, the task of INSTALLING the maze generation code should go in this section.*
+
 ---
 
 ## Installation instructions
+
+Assuming ROS Noetic and Gazebo is already installed on your machine 
 
 ```
 sudo apt-get install python3-dev
@@ -88,12 +88,24 @@ install my ball tracker library instructions add `catkin_w/src/balltracker`
 	<TH>Status (completion percentage)</TH>
 </TR>
 <TR>
-	<TD>Install PR2 ROS Indigo Package</TD>
+	<TD> Find a blue ball in an image </TD>
 	<TD>100%</TD>
 </TR>
 <TR>
-	<TD>Write brain reader software to move the robot</TD>
-	<TD>25% (brain reader software detects brain waves, but does not translate to ROS commands.)</TD>
+	<TD> Differentiate a blue ball from reasonably similar objects </TD>
+	<TD>100%</TD>
+</TR>
+<TR>
+	<TD> Simulate the Environment in Gazebo</TD>
+	<TD>100%</TD>
+</TR>
+<TR>
+	<TD> Follow the blue ball in the an environment </TD>
+	<TD>100%</TD>
+</TR>
+<TR>
+	<TD> Implement gazebo code to a actual robot? </TD>
+	<TD>100%</TD>
 </TR>
 </TABLE>
 
@@ -106,23 +118,23 @@ install my ball tracker library instructions add `catkin_w/src/balltracker`
 
 ## What did you learn from this project?
 
-*For example, what concepts from class do you now have a solid understanding of?  What new techniques did you learn?*
-
-*Also, what challenges did you face, and how did you overcome these?  Be specific.*
+What I learned form this project is 
 
 ---
 
 ## Future Work
 
-*If a student from next year's class wants to build upon your project, what would you suggest they do?  What suggestions do you have to help get them started (e.g., are there particular Websites they should check out?).*
+Potentially build the blueball tracking script to adjust for different lighting conditions glare, darkness etc
+
+Bring in a new Object Detection script to detect a "moving object" or some other pattern recognition software in a video frame captured from a camera on a moving robot.
 
 ---
 
 ## References/Resources
 
 *What resources did you use to help finish this project?*
-- Include links to Websites.  Explain what this Website enabled you to accomplish.
-- Include references to particular chapters/pages from the ROS book.  Why was each chapter necessary/helpful?
+- https://www.pyimagesearch.com/
+- 
 
 
 
