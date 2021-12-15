@@ -1,13 +1,3 @@
-This document (`README_template.md`) provides a template for your **final** documentation (**NOT YOUR PROPOSAL**).
-
-- Your final document should be named simply `README.md`.  
-- I've left several comments below.  These should obviously be removed from your document.
-- You may add additional sections as you see fit, but you should not **remove** any of the sections defined below.
-- Any supplementary images should go in a directory called `Images`.  See [README.md](README.md) for more information about the required directory structure.
-- Please keep in mind that the audience for this document should be students in the Fall 2022 section of this class.  (In other words, write this such that 3-month-younger you would've been able to utilize this document.)
-
----
-
 # [Blue Ball Tracking Robot Project Fall 2021]
 
 Project Name: [provide catkin_ws name here].  
@@ -20,15 +10,14 @@ Team:
 
 ## Project Description
 
-*In this section, describe what your project does. This should be descriptive.  Someone from next year's class should be able to fully understand the aims and scope of your project. I highly recommend using pictures to help explain things.  Maybe even post a YouTube video showing your code in action.*
-
-*NOTE:  This is not a proposal.  This is a final report describing your actual completed project.*
-
-
+The Following instructions describe how to implement code, that can:
+- Help you reference your webcam
+- Track a blue ball in your webcam video stream
+- 
 
 ### Contributions
 
-The interesting thing about this roject is the challenge of making a robust object tracker and then applying it towards the goal of navigation.
+The interesting thing about this project is the challenge of making a robust object tracker and then applying it towards the goal of navigation.
 There are exsisting Ball targeting object trackers that exsist out there but they are typically the intro example into object tracking code and work on a simply tracking an object of a single color across a screen. My task is a bit simpler because I know the size shape and color of my object of interest but completing this project well will let me practice basic concepts of more complex machine learing and object tracking
 
 ---
@@ -46,9 +35,6 @@ List of Prerequisite Software:
 - python3-math
 - Open CV CV2
 
-
-*The expectation is that the user should only have to follow these steps one time.  For example, if your project requires generating Gazebo mazes, the task of INSTALLING the maze generation code should go in this section.*
-
 ---
 
 ## Installation instructions
@@ -60,10 +46,49 @@ sudo apt-get install python3-dev
 pip install --upgrade numpy
 pip install --upgrade imutils 
 sudo pip install opencv-contrib-python
-
 ```
 
 install my ball tracker library instructions add `catkin_w/src/balltracker`
+
+1. Create the Package:
+```
+cd ~/catkin_ws/src
+catkin_create_pkg ballttracker rospy geometry_msgs sensor_msgs
+
+```
+2. Make the `scripts` directory
+```
+cd ~/catkin_ws/src/balltracker
+mkdir scripts
+
+```
+3. Get the source code from the course github site:
+```
+cd ~/Downloads
+rm -rf BallTracker
+git clone https://github.com/jhulburt/Ball_Tracker.git
+
+```
+
+4. Copy the Python scripts to our teleopbot workspace
+```
+cd BallTracker/code/
+cp scripts/* ~/catkin_ws/src/balltracker/scripts/
+
+```
+
+5. Make our Python scripts executable
+```
+cd ~/catkin_ws/src/teleopbot/scripts
+chmod +x *.py
+
+```
+
+6. Compile/make our package
+```
+cd ~/catkin_ws
+catkin_make
+```
 
 ---
 
@@ -107,18 +132,36 @@ install my ball tracker library instructions add `catkin_w/src/balltracker`
 	<TD> Implement gazebo code to a actual robot? </TD>
 	<TD>100%</TD>
 </TR>
+<TR>
+	<TD> Implement the tracker on a real camera </TD>
+	<TD>100%</TD>	
+</TR>
 </TABLE>
 
-*NOTE 1:  I have your proposals...don't move the goal posts!*
+### Reach Goals
 
-*NOTE 2:  For activities less than 100% complete, you should differentiate between what you completed and what you were unable to complete. I suggest you add details in a bullet list below.* 
+<TABLE>
+<TR>
+	<TH>Reach Goals</TH>
+	<TH>Status (completion percentage)</TH>
+</TR>
+<TR>
+	<TD> Implement the Code on a physical robot </TD>
+	<TD>15% ? </TD>
+</TR>
+<TR>
+	<TD> Use generic motion detector  </TD>
+	<TD>0%</TD>
+</TR>
+</TABLE>
 
+My set goals are 100% completed
 
 ---
 
 ## What did you learn from this project?
 
-What I learned form this project is 
+A good amount, on top of practicing skills that we had learned throughout the class, I learned alot. For example how world files are structured and how different types of objects ore treated in gazebo. How to interface with my computer hardware and find it from the command line. I got alot of troupble shooting practice on reading errors and correcting them as best I could. I learned about DHCP and how to manually configure a how a device connects to a network and more practices on how to discover problem areas.
 
 ---
 
@@ -126,7 +169,9 @@ What I learned form this project is
 
 Potentially build the blueball tracking script to adjust for different lighting conditions glare, darkness etc
 
-Bring in a new Object Detection script to detect a "moving object" or some other pattern recognition software in a video frame captured from a camera on a moving robot.
+Bring in a new Object Detection script to detect a "moving object" or some other pattern recognition software in a video frame captured from a camera on a moving robot. I could use a simple approach that only detects moving objects whle stationary or while moving very slowly. Since Tracking Moving objects in a moving video frame is quite difficult and very much a subject of research within computer vision my goal would be to differentiate the perspective motion of the background against the actual motion of an object in the image. That would mean interpolating the environment's structure and then and how it should move and subtracting it from how it is moving. This would be no small task and I would need more than one camera to accomplish that.
+
+Lastly, I would like to be able to overcome internet issues and get the robot to work.
 
 ---
 
