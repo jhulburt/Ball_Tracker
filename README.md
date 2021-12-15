@@ -94,11 +94,13 @@ catkin_make
 
 ## Running the Code
 
-*Provide detailed step-by-step instructions to run your code.*
+1) Open 3 terminal windows
 
-*NOTE 1:  At this point, the user should have already installed the necessary code.  This section should simply describe the steps for RUNNING your project.*  
+2) ```rosrun balltracker bueball.launch```
+3) ```rosrun balltracker ball_follow.py```
+4) ```rosrun balltracker ball_move.py```
 
-*NOTE 2:  If you're generating mazes, for example, the task of GENERATING a new maze would go here.*
+A window with the roots view should open and the robot should follow the ball in the simulation.
 
 ---
 
