@@ -43,8 +43,8 @@ Assuming ROS Noetic and Gazebo is already installed on your machine
 
 ```
 sudo apt-get install python3-dev
-pip install --upgrade numpy
-pip install --upgrade imutils 
+sudo pip install --upgrade numpy
+sudo pip install --upgrade imutils 
 sudo pip install opencv-contrib-python
 ```
 
